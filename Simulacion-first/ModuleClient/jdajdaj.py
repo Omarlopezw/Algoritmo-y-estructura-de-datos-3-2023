@@ -34,7 +34,7 @@ class test(tk.Tk):
             self.name.grid(row=0, column=1, padx=5, pady=5)
             button = tk.Button(self.subwindow1,text = 'Send Data',command=self.getname) 
             button.grid(row=3,column=1)
-            self.getname()
+            # self.getname()
         def tests(self):
              pass
 
