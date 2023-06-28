@@ -1,4 +1,4 @@
-from ManagmentWindow import ManagmentWindow
+from ClientHandler import ClientHandler
 import tkinter as tk
 
 
@@ -28,25 +28,25 @@ class MenuApp:
 
     def addClient(self):
         self.root.destroy()
-        self.ManagmentWindow = ManagmentWindow()
-        self.ManagmentWindow.create_subwindow1()
+        self.ClientHandler = ClientHandler()
+        self.ClientHandler.addClient()
     def deleteClient(self):
         self.root.destroy()
-        self.ManagmentWindow = ManagmentWindow()
-        self.ManagmentWindow.create_subwindow2()
+        self.ClientHandler = ClientHandler()
+        self.ClientHandler.deleteClient()
 
     def updateClient(self):
         self.root.destroy()
-        self.ManagmentWindow = ManagmentWindow()
-        self.ManagmentWindow.create_subwindow4()
+        self.ClientHandler = ClientHandler()
+        self.ClientHandler.updateClient()
     def readAllClients(self):
         self.root.destroy()
-        self.ManagmentWindow = ManagmentWindow()
-        self.ManagmentWindow.create_subwindow5()
+        self.ClientHandler = ClientHandler()
+        self.ClientHandler.searchAllClients()
     def readClient(self):
         self.root.destroy()
-        self.ManagmentWindow = ManagmentWindow()
-        self.ManagmentWindow.create_subwindow3()
+        self.ClientHandler = ClientHandler()
+        self.ClientHandler.searchClient()
 
     def exit_program(self):
         self.root.destroy()
