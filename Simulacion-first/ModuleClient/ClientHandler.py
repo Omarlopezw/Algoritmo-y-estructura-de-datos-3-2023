@@ -17,16 +17,8 @@ class ClientHandler(tk.Tk):
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill=tk.BOTH, expand=True)
 
-        # Crear las subventanas dentro del Notebook
-        # self.create_subwindow3()
-        # self.create_subwindow1()
-        # self.create_subwindow2()
-
-        # self.mainloop()
-
     def addClient(self):
 
-        #Se podria mover toda la ventana
         self.subwindow1 = ttk.Frame(self.notebook)
         self.notebook.add(self.subwindow1, text="Add Client")
 
@@ -34,28 +26,22 @@ class ClientHandler(tk.Tk):
         self.subwindow1.config(width=300,height=300)
         label1 = tk.Label(self.subwindow1,text='Name')
         label1.grid(row=0, column=0, padx=5, pady=5)
-        name = tk.Entry(self.subwindow1)
-        name.grid(row=0, column=1, padx=5, pady=5)
-        self.client.setName(name.get())
+        self.name = tk.Entry(self.subwindow1)
+        self.name.grid(row=0, column=1, padx=5, pady=5)
 
         label2 = tk.Label(self.subwindow1,text='Surname')
         label2.grid(row=1, column=0, padx=5, pady=5)
-        surname = tk.Entry(self.subwindow1)
-        surname.grid(row=1, column=1, padx=5, pady=5)
-        self.client.setSurname(surname.get())
-
+        self.surname = tk.Entry(self.subwindow1)
+        self.surname.grid(row=1, column=1, padx=5, pady=5)
 
         label3 = tk.Label(self.subwindow1,text='ClientCode')
         label3.grid(row=2, column=0, padx=5, pady=5)
-        ClientCode = tk.Entry(self.subwindow1)
-        ClientCode.grid(row=2, column=1, padx=5, pady=5)
-        self.client.setClientCode(ClientCode.get())
-
+        self.ClientCode = tk.Entry(self.subwindow1)
+        self.ClientCode.grid(row=2, column=1, padx=5, pady=5)
 
         #Use DatabaseHandler
         self.db.connect()
-        button = tk.Button(self.subwindow1,text = 'Send Data',
-            command=lambda: self.db.addClientRegister(self.client.getName(),self.client.getSurname(),self.client.getClientCode()) )
+        button = tk.Button(self.subwindow1,text = 'Send Data',command=self.prepareClientData)
         button.grid(row=3,column=1)
 
     def deleteClient(self):
@@ -129,13 +115,16 @@ class ClientHandler(tk.Tk):
         self.db.connect()
         button = tk.Button(self.subwindow5,text = 'Search all clients',command=lambda: self.db.searchAllClients())
         button.grid(row=4,column=1)
-    def getname(self):
-        return self.client.getName()
-    def setName(self,name):
-        return self.client.setName(name)
+    def prepareClientData(self):
 
-MngmtWind = ClientHandler()
-# MngmtWind.create_subwindow1()
-tk.mainloop()
-MngmtWind.setName('juan')
-print(MngmtWind.getName())
+        #prepare dataClient
+        self.client.setName(self.name.get())
+        self.client.setSurname(self.surname.get())
+        self.client.setClientCode(self.ClientCode.get())
+
+        #Use dataClient
+        self.db.addClientRegister(self.client.getName(),self.client.getSurname(),self.client.getClientCode())
+
+# MngmtWind = ClientHandler()
+# tk.mainloop()
+
