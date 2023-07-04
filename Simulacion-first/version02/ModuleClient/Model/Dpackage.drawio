@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="odxcFifbtPtaFw0dDVKI" name="Page-1">
+        <mxGraphModel dx="844" dy="359" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=120;tabHeight=30;tabPosition=left;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="50" width="840" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="GUI" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=60;tabHeight=20;tabPosition=left;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="140" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Application" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="374" y="50" width="80" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ClientHandler" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=70;tabHeight=20;tabPosition=left;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="140" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Client" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=60;tabHeight=20;tabPosition=left;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="890" y="140" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="DatabaseHandler" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="200" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="GUI" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="374" y="140" width="80" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Controller" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="140" width="80" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Database" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+                    <mxGeometry x="880" y="140" width="80" height="26" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
